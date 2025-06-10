@@ -1,0 +1,189 @@
+<!-- Autores: Theo Cortabarria (348881), Rufino Lopez Castilla (354195) - Grupo M1C -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sitio de Corredores </title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/clases.js"></script>
+    <script src="js/obligatoriop1.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sitio de Corredores</h1>
+        <img src="Imagenes/imagen.jpeg" alt="Logo Corredores de Uruguay">
+    </header>
+
+    <div class="botones">
+     <button id="botonDatos" class="boton">Datos</button>
+     <button id="botonEstadisticas" class="boton">Estadísticas</button>
+    </div>
+
+    <main>
+        <section id="datos">
+            <h2>Datos</h2>
+
+            <article id="carreras">
+                
+                <h3>Carreras</h3>
+                <form>
+                    <label>Nombre: <br>
+                         <input type="text" required></label><br>
+                    <label>Departamento: <br>
+                        <select>
+                            <option>Montevideo</option>
+                            <option>Canelones</option>
+                            <option>Maldonado</option>
+                            <option>Artigas</option>
+                            <option>Cerro Largo</option>
+                            <option>Colonia</option>
+                            <option>Durazno</option>
+                            <option>Flores</option>
+                            <option>Florida</option>
+                            <option>Lavalleja</option>
+                            <option>Paysandú</option>
+                            <option>Río Negro</option>
+                            <option>Rivera</option>
+                            <option>Rocha</option>
+                            <option>Salto</option>
+                            <option>San José</option>
+                            <option>Soriano</option>
+                            <option>Tacuarembó</option>
+                            <option>Treinta y Tres</option>
+                        </select>
+                    </label><br>
+                    <label>Fecha:<br>
+                         <input type="date" required></label><br>
+                    <label>Cupo: <br>
+                        <input type="number" min="1" max="1000" value="30"></label><br>
+                    <button>Agregar Carrera</button>
+                </form>
+            </article>
+
+            <article id="patrocinadores">
+                
+                <h3>Patrocinador</h3>
+                <form>
+                    <label>Nombre: <br>
+                         <input type="text" required></label><br>
+                    <label>Rubro: <br>
+                        <select>
+                            <option>Alimenticio</option>
+                            <option>Banco</option>
+                            <option>Bebidas</option>
+                            <option>Farmacia</option>
+                            <option>Ropa Deportiva</option>
+                            <option>Estatal</option>
+                            <option>General</option>
+                        </select>
+                    </label><br>
+                    <label>Carreras que apoya: <br>
+                        <select multiple><option> Carrera1  </option></select></label><br>
+                    <button>Agregar/Actualizar Patrocinador</button>
+                </form>
+            </article>
+
+            <article id="corredores">
+                
+                <h3>Corredores</h3>
+                <form>
+                    <label>Nombre: <br>
+                        <input type="text" required></label><br>
+                    <label>Edad: <br>
+                    <input type="number" min="18" value="18" required></label><br>
+                    <label>Cédula:<br> <input type="text" required></label><br>
+                    <label>Fecha de vencimiento de la Ficha Médica: <br>
+                    <input type="date" required></label><br>
+                    <label>
+                        Tipo de Corredor: 
+                        <input type="radio" name="tipoCorredor" value="comun" checked> Deportista Común
+                        </label>
+                        <label>
+                        <input type="radio" name="tipoCorredor" value="elite"> Deportista Élite
+                        
+                    </label><br>
+                    <button>Agregar Corredor</button>
+                </form>
+            </article>
+
+            <article id="inscripciones">
+                
+                <h3>Inscripciones</h3>
+                <form>
+                    <label> Corredor: <br><select><option value=""> Seleccionar </option></select></label><br>
+                    <label> Carrera: <br><select><option value="">  Seleccionar </option></select></label><br>
+                    <button>Inscribir</button>
+                </form>
+            </article>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Estadísticas</h2>
+
+            <article id="generales">
+                
+                <h3>Datos Generales</h3>
+                <p>Promedio de inscriptos: Sin Datos </p>
+                
+                    <p>Carrera con más inscriptos: </p>
+                        <ul><li>Sin Datos </li></ul>
+                    <p>Carreras sin inscriptos ordenadas por Fecha: </p>
+                        <ul><li>sin Datos</li></ul>
+                    <p>Porcentaje de corredores de élite: Sin Datos </p>
+            </article>
+
+            <article id="consulta">
+                
+                <h3>Consulta de Inscriptos</h3>
+                <label>Carrera: <br><select><option value="">  Seleccionar   </option></select></label><br>
+                <label>
+                        Ordenar por: 
+                        <input type="radio" name="orden" value="nombre" checked> Nombre  </label>
+                        <label>
+                        <input type="radio" name="orden" value="numero"> Número </label><br><br>
+
+
+
+                <table>
+                   <caption> Inscriptos: </caption>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Cédula</th>
+                            <th>Ficha Médica</th>
+                            <th>Número</th>
+                        </tr>
+                    </thead>
+                </table>
+            </article>
+
+
+
+
+            <article id="mapa">
+                
+                <h3>Visualizar Mapa</h3>
+                <label> 
+                        <input type="radio" name="mapa" value="carrera" checked>
+                            Por Carrera
+                            </label>
+                            <label>
+                        <input type="radio" name="mapa" value="inscripcion">
+                            Por Inscripción 
+                    </label>
+                    <br>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        
+        <p>Programación 1 - Obligatorio 1er semestre 2025 - Autores:</p>
+        <p>Grupo M1C - Theo Cortabarria (Nro estudiante: 348881) <a href="https://www.ort.edu.uy/" > Link </a></p>
+        <p>Grupo M1C - Rufino Lopez Castilla (Nro estudiante: 354195) <a href="https://www.ort.edu.uy/" >Link </a> </p>
+        
+    </footer>
+</body>
+</html>
